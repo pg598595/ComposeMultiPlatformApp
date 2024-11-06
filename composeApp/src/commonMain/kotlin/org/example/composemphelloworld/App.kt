@@ -18,7 +18,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import composemphelloworld.composeapp.generated.resources.Res
 import composemphelloworld.composeapp.generated.resources.compose_multiplatform
+import composemphelloworld.composeapp.generated.resources.hello_world
 import composemphelloworld.composeapp.generated.resources.logo
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 @Preview
@@ -34,6 +36,7 @@ fun App(
             Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally){
                 Image(painterResource(Res.drawable.logo),null)
                 Text(text = "The current battery level is ${batteryManager.getBatteryLevel()}")
+                Text(text = stringResource(Res.string.hello_world))
             }
         }
     }
